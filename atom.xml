@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://noshore.cn/"/>
   <updated>2020-03-31T08:16:02.393Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://noshore.cn/</id>
   
   <author>
     <name>无岸海</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>qsx</title>
-    <link href="http://yoursite.com/2020/03/31/qsx/"/>
-    <id>http://yoursite.com/2020/03/31/qsx/</id>
+    <link href="https://noshore.cn/2020/03/31/qsx/"/>
+    <id>https://noshore.cn/2020/03/31/qsx/</id>
     <published>2020-03-31T08:15:07.000Z</published>
     <updated>2020-03-31T08:16:02.393Z</updated>
     
@@ -41,8 +41,8 @@
   
   <entry>
     <title>加密</title>
-    <link href="http://yoursite.com/2020/03/29/article/"/>
-    <id>http://yoursite.com/2020/03/29/article/</id>
+    <link href="https://noshore.cn/2020/03/29/article/"/>
+    <id>https://noshore.cn/2020/03/29/article/</id>
     <published>2020-03-29T05:53:18.000Z</published>
     <updated>2020-03-29T08:02:19.927Z</updated>
     
@@ -64,8 +64,8 @@
   
   <entry>
     <title>第一篇</title>
-    <link href="http://yoursite.com/2020/03/29/post/"/>
-    <id>http://yoursite.com/2020/03/29/post/</id>
+    <link href="https://noshore.cn/2020/03/29/post/"/>
+    <id>https://noshore.cn/2020/03/29/post/</id>
     <published>2020-03-29T05:22:32.000Z</published>
     <updated>2020-03-29T05:23:09.735Z</updated>
     
