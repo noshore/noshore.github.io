@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://noshore.cn/"/>
-  <updated>2020-04-02T13:47:51.180Z</updated>
+  <updated>2020-04-02T13:54:09.272Z</updated>
   <id>https://noshore.cn/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>raidrive</title>
+    <title>使用RaiDrive将网盘映射为本地磁盘</title>
     <link href="https://noshore.cn/2020/04/02/raidrive/"/>
     <id>https://noshore.cn/2020/04/02/raidrive/</id>
     <published>2020-04-02T12:22:01.000Z</published>
-    <updated>2020-04-02T13:47:51.180Z</updated>
+    <updated>2020-04-02T13:54:09.272Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://gitee.com/noshore/images/raw/master/20200402214724.jpg" alt></p><a id="more"></a><p>&ensp; &ensp; 你是不是也想拥有别人那样的<strong>TB</strong>甚至<strong>EB</strong>的本地磁盘呢？这边为你提供一个实现这个想法的教程——通过<strong>Raidrive</strong>将网盘映射为本地磁盘。<br><img src="https://gitee.com/noshore/images/raw/master/20200402202917.png" alt><br>&ensp; &ensp; <strong>RaiDrive</strong>是一款开源的网盘映射工具，支持Google Drive、Google Photos、Dropbox、OneDrive、FTP、SFTP、WebDAV，该工具目前只有Windows版本。<br><img src="https://gitee.com/noshore/images/raw/master/20200402202537.png" alt><br><img src="https://gitee.com/noshore/images/raw/master/20200402202905.png" alt></p><h1 id="一、注册网盘帐号"><a href="#一、注册网盘帐号" class="headerlink" title="一、注册网盘帐号"></a>一、注册网盘帐号</h1><p>&ensp; &ensp; 现在用的比较多的就是Google Drive和OneDrive，但是国内如果你不会科学上网的话，Google Drive是用不了的。推荐使用Onedrive速度虽然不快但还是可以的。帐号的话大学应该都有提供学校的教育邮箱，去微软官网申请账号可以获得1T的容量。<br>&ensp; &ensp; 如果不是学生，博主这边会提供一些5T帐号，新的空白账号，支持修改密码。关注公众号：<strong>无岸海</strong>，回复<strong>5T帐号</strong> 即可领取。<br>&ensp; &ensp; 另外博主也提供<strong>创建Google Drive团队盘</strong>的服务，同样关注公众号：<strong>无岸海</strong>，回复<strong>团队盘</strong>。</p><h1 id="二、下载与安装"><a href="#二、下载与安装" class="headerlink" title="二、下载与安装"></a>二、下载与安装</h1><p>&ensp; &ensp; 可以前往<a href="https://www.raidrive.com/download/" target="_blank" rel="noopener">RaiDrive官网</a>下载最新版本安装。如果觉得下载慢可以直接使用博主提供的<a href="https://www.lanzous.com/iaxj7gf" target="_blank" rel="noopener">蓝奏云链接</a>下载，目前是最新版本，以后出了新版本也一样可以先下载这个版本，之后在软件中点击升级。</p><h1 id="三、连接网盘与映射"><a href="#三、连接网盘与映射" class="headerlink" title="三、连接网盘与映射"></a>三、连接网盘与映射</h1><p>&ensp; &ensp; 由于Google服务在国内无法访问，需要代理，并不是所有人都适合，所以这篇文章以OneDrive为例。</p><h2 id="1-修改语言"><a href="#1-修改语言" class="headerlink" title="1.修改语言"></a>1.修改语言</h2><p>&ensp; &ensp; 下载安装完成之后，打开软件应该是英文的，点击右上角的设置，先将语言改为中文以便你的连接与映射。<br><img src="https://gitee.com/noshore/images/raw/master/20200402210818.png" alt></p><h2 id="2-添加网盘"><a href="#2-添加网盘" class="headerlink" title="2.添加网盘"></a>2.添加网盘</h2><p>&ensp; &ensp; 右上角点击添加，选择Microsoft-OneDrive。自定义磁盘名称，<strong>将勾选的只读去掉</strong>，否则映射之后将无法写入，点击<strong>确定</strong>。<br><img src="https://gitee.com/noshore/images/raw/master/20200402211410.png" alt></p><h2 id="3-登陆OneDrive帐号"><a href="#3-登陆OneDrive帐号" class="headerlink" title="3.登陆OneDrive帐号"></a>3.登陆OneDrive帐号</h2><p>&ensp; &ensp; 输入账号密码，登陆。<br><img src="https://gitee.com/noshore/images/raw/master/20200402212724.png" alt></p><h2 id="4-授权RaiDrive"><a href="#4-授权RaiDrive" class="headerlink" title="4.授权RaiDrive"></a>4.授权RaiDrive</h2><p>&ensp; &ensp; 登陆账号后跳转到一个链接，RaiDrive请求征得许可，点击<strong>接受</strong>。<br><img src="https://gitee.com/noshore/images/raw/master/20200402212544.png" alt></p><h2 id="5-连接成功"><a href="#5-连接成功" class="headerlink" title="5.连接成功"></a>5.连接成功</h2><p>&ensp; &ensp; 提示RaiDrive将OneDrive连接到驱动器就成功了。<br><img src="https://gitee.com/noshore/images/raw/master/20200402212553.png" alt></p><h1 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h1><p>&ensp; &ensp; 这样就拥有了大容量的本地磁盘，速度方便的话OneDrive还可以但也不快，不过用来在朋友面前装一下也是可以的哈哈哈。<br>&ensp; &ensp; 最后OneDrive的网盘当你用了超过90%可以免费升级25T，简便的方法就是先传个几十M的文件进去，然后复制粘贴，网速快的话十几分钟就能完成。</p>]]></content>
     
