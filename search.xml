@@ -3,7 +3,9 @@
   <entry>
     <title>利用码云gitee+Picgo搭建个人图床</title>
     <url>/2020/04/02/picgo/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h1><p>&ensp; &ensp; 日常写博客总会需要用到一些图片，本地图片一个个导入很麻烦而且会影响到博客的加载速度。网上也有很多免费的图床，不过总感觉不安全，万一哪天他们不做了之前的图片就都失效了。所以思来想去还是自己搭建一个图床。自己搭建图床的话可以用腾讯云、阿里云OSS，可惜需要付费，对于我这种需求量不大又刚起步的博客来说更偏向于白嫖。<br>&ensp; &ensp; 所以，最终选择使用 gitee 和 PicGo 搭建个人图床，相对现状这个是更加简便又实在的，存储、速度也都可以满足要求。或者，用 Github 代替 gitee 也是一样的，但是毕竟由于一些原因，访问有时太慢了，甚至直接卡掉，严重影响体验。不过也可以使用jsDelivr的CDN加速，这个之后有空在另一篇博客讲解。</p>
+    <content><![CDATA[<p><img src="https://gitee.com/noshore/images/raw/master/20200402194146.jpg" alt></p>
+<a id="more"></a>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h1><p>&ensp; &ensp; 日常写博客总会需要用到一些图片，本地图片一个个导入很麻烦而且会影响到博客的加载速度。网上也有很多免费的图床，不过总感觉不安全，万一哪天他们不做了之前的图片就都失效了。所以思来想去还是自己搭建一个图床。自己搭建图床的话可以用腾讯云、阿里云OSS，可惜需要付费，对于我这种需求量不大又刚起步的博客来说更偏向于白嫖。<br>&ensp; &ensp; 所以，最终选择使用 gitee 和 PicGo 搭建个人图床，相对现状这个是更加简便又实在的，存储、速度也都可以满足要求。或者，用 Github 代替 gitee 也是一样的，但是毕竟由于一些原因，访问有时太慢了，甚至直接卡掉，严重影响体验。不过也可以使用jsDelivr的CDN加速，这个之后有空在另一篇博客讲解。</p>
 <h1 id="一、环境准备"><a href="#一、环境准备" class="headerlink" title="一、环境准备"></a>一、环境准备</h1><h2 id="1-安装Node-js"><a href="#1-安装Node-js" class="headerlink" title="1.安装Node.js"></a>1.安装Node.js</h2><p>这里需要注意一下，安装<a href="http://nodejs.cn/download/" target="_blank" rel="noopener">Node.js</a>是为了后面配置Picgo插件。</p>
 <h2 id="2-安装Picgo"><a href="#2-安装Picgo" class="headerlink" title="2.安装Picgo"></a>2.安装Picgo</h2><p>进入<a href="https://picgo.github.io/PicGo-Doc/zh/guide/" target="_blank" rel="noopener">Picgo官网</a>下载，由于github的问题下载速度较慢，在这里放上博主已经下载好上传到百度网盘的。<br>链接:<a href="https://pan.baidu.com/s/115MA7FdskRM2Rapd4RsBmg" target="_blank" rel="noopener">https://pan.baidu.com/s/115MA7FdskRM2Rapd4RsBmg</a> 提取码:a336</p>
 <h1 id="二、码云配置"><a href="#二、码云配置" class="headerlink" title="二、码云配置"></a>二、码云配置</h1><h2 id="1-注册帐号"><a href="#1-注册帐号" class="headerlink" title="1.注册帐号"></a>1.注册帐号</h2><p>首先我们需要拥有一个gitee的帐号。<a href="https://gitee.com/" target="_blank" rel="noopener">码云gitee</a><br><img src="https://gitee.com/noshore/images/raw/master/20200402174853.png" alt></p>
@@ -21,23 +23,5 @@
       <tags>
         <tag>个人图床</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>qsx</title>
-    <url>/2020/03/31/qsx/</url>
-    <content><![CDATA[<p>测试文章阅读数</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>加密</title>
-    <url>/2020/03/29/article/</url>
-    <content><![CDATA[<p>test加密<br>测试更新日期</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>第一篇</title>
-    <url>/2020/03/29/post/</url>
-    <content><![CDATA[<p>test123test123</p>
-]]></content>
   </entry>
 </search>
