@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://noshore.cn/"/>
-  <updated>2020-04-02T13:54:09.272Z</updated>
+  <updated>2020-04-03T06:49:57.757Z</updated>
   <id>https://noshore.cn/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>文献助手</title>
+    <link href="https://noshore.cn/2020/04/03/wenxianzhushou/"/>
+    <id>https://noshore.cn/2020/04/03/wenxianzhushou/</id>
+    <published>2020-04-03T06:36:48.000Z</published>
+    <updated>2020-04-03T06:49:57.757Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://gitee.com/noshore/images/raw/master/20200403143517.jpg" alt></p><a id="more"></a><p>&ensp; <strong>文献神器简介</strong></p><ul><li>文献神器是SCI-HUB Windows桌面版，输入doi号即可快速下载（国外）文献。</li><li>本软件还推荐了谷歌学术，sci-hub入口，方便查询下载文献</li><li>文献神器：让文献下载变得更简单~</li><li>备注:不是所有功能都是免费的，大家勿喷，按需索取，百度文库可以每天免费下载两篇，超过需要pay money,不过很便宜了。</li></ul><p><img src="https://gitee.com/noshore/images/raw/master/20200403143924.png" alt><br>下载地址：<a href="https://www.lanzous.com/iayb1ij" target="_blank" rel="noopener">https://www.lanzous.com/iayb1ij</a> 密码:shore<br>另外附上一个医学翻译的网站，有需要可以自己试试<br><a href="https://fanyi.atman360.com/text" target="_blank" rel="noopener">Atman Cloud翻译</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://gitee.com/noshore/images/raw/master/20200403143517.jpg&quot; alt&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Windows软件" scheme="https://noshore.cn/categories/Windows%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+      <category term="软件" scheme="https://noshore.cn/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Fing Pro v8.9.1 for Android 破解专业版</title>
+    <link href="https://noshore.cn/2020/04/03/Fingpro/"/>
+    <id>https://noshore.cn/2020/04/03/Fingpro/</id>
+    <published>2020-04-03T06:19:23.000Z</published>
+    <updated>2020-04-03T06:50:16.225Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://gitee.com/noshore/images/raw/master/20200403143516.jpg" alt></p><a id="more"></a><p>&ensp; &ensp; <strong>Fing Pro</strong> 是首屈一指的网络扫描工具：使用他们专利技术，检测连接了您的WiFi的所有设备并识别它们；全球各地的路由器制造商和杀毒软件公司都在使用他们的技术。<br><img src="https://gitee.com/noshore/images/raw/master/20200403142222.jpg" alt></p><p><strong>Fing Pro 帮助全球3500万用户查清楚</strong></p><ul><li>谁连接了我的 WiFi？</li><li>是否有人偷连了我的 WiFi 和宽带？</li><li>我的 WiFi 被破解了吗？我的网络安全吗？</li><li>为什么 Netflix 变得卡顿了？</li><li>网络服务供应商提供的带宽，与我购买的带宽一致吗？</li><li>使用 Fing App 的免费工具和实用程序：</li><li>使用 Fing 的 Wi-Fi 网络扫描仪扫描网络，并发现连接到任何网络的所有设备</li><li>运行互联网速度测试、WiFi速度测试、下载速度和上传速度分析和延迟</li><li>获取 IP 地址、MAC地址、设备名称、型号、供应商和制造商的最准确设备识别</li><li>NetBIOS、UPnP、SNMP 和 Bonjour 名称，属性和设备类型的高级设备分析</li><li>检测 Wi-Fi 入侵者，在每次扫描时显示您的新未知设备</li><li>包括端口扫描、设备 ping、traceroute、DNS 查找和 LAN 唤醒</li><li>注册以接收手机和电子邮件的网络安全和设备警报</li></ul><p><strong>添加Fingbox以解锁高级网络保护和智能家居故障排除功能：</strong></p><ul><li>不在家时总是知道谁在家</li><li>查看您家附近经过的所有设备</li><li>在加入您的网络之前自动阻止入侵者和未知设备</li><li>设置家长控制功能，以安排屏幕时间和暂停互联网访问</li><li>按设备分析带宽使用情况，以查找正在使用的用户</li><li>找到Wi-Fi甜蜜点</li><li>自动化网络速度测试并获取用于ISP性能基准测试的报告</li><li>通过开放的端口检测和网络漏洞分析保护您的家庭网络</li></ul><p> <strong>更新内容如下：</strong></p><ul><li>通过Ping，Traceroute，端口扫描和Lan唤醒移动工具改善了用户交互；</li><li>错误修正和改进。</li></ul><p><strong>关于版本：</strong><br>感谢国外XDA大神的修改和分享，特点如下：</p><ul><li>独立的Android程序包；</li><li>重新打包了Android应用包（KirIif’拆分了APKs Packer v4.7.1）：&#8226;支持的CPU架构：armeabi-v7a，arm64-v8a，x86；</li><li>&#8226;支持的屏幕DPI：ldpi [120dpi]，mdpi [160dpi]，hdpi [240dpi]，xhdpi [320dpi]，xxhdpi [480dpi]，xxxhdpi [640dpi]；</li><li>&#8226;语言：多国语言；</li><li>订阅专业版已解锁；</li><li>删除促销应用；</li><li>禁用/删除不需要的权限+接收者和服务；</li><li>Analytics（分析）/ Crashlytics（崩溃）已禁用。</li></ul><p>地址奉上：<a href="https://www.lanzous.com/iaya89g" target="_blank" rel="noopener">https://www.lanzous.com/iaya89g</a> 密码:shore</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://gitee.com/noshore/images/raw/master/20200403143516.jpg&quot; alt&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="安卓软件" scheme="https://noshore.cn/categories/%E5%AE%89%E5%8D%93%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+      <category term="软件" scheme="https://noshore.cn/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>使用RaiDrive将网盘映射为本地磁盘</title>
