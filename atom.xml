@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://noshore.cn/"/>
-  <updated>2020-04-03T07:34:48.043Z</updated>
+  <updated>2020-04-04T12:02:39.487Z</updated>
   <id>https://noshore.cn/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo双线部署coding+github pages，进行速度优化并实现HTTPS</title>
+    <link href="https://noshore.cn/2020/04/04/shuangxianbushu/"/>
+    <id>https://noshore.cn/2020/04/04/shuangxianbushu/</id>
+    <published>2020-04-04T07:43:58.000Z</published>
+    <updated>2020-04-04T12:02:39.487Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://gitee.com/noshore/images/raw/master/20200404200008.jpg" alt></p><a id="more"></a><h1 id="一、域名申请"><a href="#一、域名申请" class="headerlink" title="一、域名申请"></a>一、域名申请</h1><p>首先，也是最主要的，你需要购买一个域名，常见的有阿里云、腾讯云、新网等</p><h1 id="二、coding注册及配置"><a href="#二、coding注册及配置" class="headerlink" title="二、coding注册及配置"></a>二、coding注册及配置</h1><h2 id="1-注册账户"><a href="#1-注册账户" class="headerlink" title="1.注册账户"></a>1.注册账户</h2><p>进入<a href="https://coding.net/" target="_blank" rel="noopener">coding官网</a>，点击免费注册（创建团队，5人以下免费） 注意这个地方用户名一定要好好设置，因为后面为了方便需要用到。</p><h2 id="2-创建项目"><a href="#2-创建项目" class="headerlink" title="2.创建项目"></a>2.创建项目</h2><p>选择代码托管项目，项目名称建议和你的用户名一致，到时候可以直接通过  <font color="red">user_name.coding.me</font>访问你的博客，如果项目名与用户名不一致，则需要通过  <font color="red"> user_name.coding.me/project_name </font>才能访问，项目描述随便写，勾选启用 README.md 文件初始化项目。<br><img src="https://gitee.com/noshore/images/raw/master/20200404160752.png" alt></p><h2 id="3-添加ssh-key"><a href="#3-添加ssh-key" class="headerlink" title="3.添加ssh key"></a>3.添加ssh key</h2><p>这一步和github是一样的<br>在git bash中<br><code>git config --global user.name &quot;yourname&quot;</code><br><code>git config --global user.email &quot;youremail&quot;</code><br>可以用以下两条，检查一下你有没有输对<br><code>git config user.name</code><br><code>git config user.email</code><br>然后创建SSH,一路回车<br><code>ssh-keygen -t rsa -C &quot;youremail&quot;</code><br>ssh，简单来讲，就是一个秘钥，其中，id_rsa是你这台电脑的私人秘钥，不能给别人看的，id_rsa.pub是公共秘钥，可以随便给别人看。把这个公钥放在GitHub上，这样当你链接GitHub自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过git上传你的文件到GitHub上。<br>之前配置过github直接用就行，个人设置-ssh公钥，然后新增公钥，名称随便填，点击<strong>永久有效</strong>。<br><img src="https://gitee.com/noshore/images/raw/master/20200404162431.png" alt><br>添加后，检查一下是不是添加成功<br><code>ssh -T git@git.coding.net</code></p><h1 id="三、配置-config-yml"><a href="#三、配置-config-yml" class="headerlink" title="三、配置_config.yml"></a>三、配置_config.yml</h1><p>通过修改站点配置文件，实现github和coding的同时部署。<br>选择 SSH 方式（HTTPS 方式也可以，但是这种方式有时候可能连接不上，SSH 连接不容易出问题）复制链接，修改deploy如下，其中coding部分需要修改为你自己的用户名，也可以在项目概览右下角选择SSH，复制后面的内容。<br><img src="https://gitee.com/noshore/images/raw/master/20200404163003.png" alt><br><img src="https://gitee.com/noshore/images/raw/master/20200404193335.png" alt><br>然后执行命令<code>hexo g -d</code> 将博客双线部署</p><h1 id="四、开启Coding-Pages"><a href="#四、开启Coding-Pages" class="headerlink" title="四、开启Coding Pages"></a>四、开启Coding Pages</h1><p>进入你的项目，在构建与部署一栏选择静态网站，这里需要实名认证。<br>这里需要注意，新版的coding没有构建与部署，需要手动勾选。<br>左下角点击项目设置-功能开关-勾选构建与部属。<br><img src="https://gitee.com/noshore/images/raw/master/20200404163354.png" alt><br>选择静态网站，填写信息，跟着我的图勾选。<br><img src="https://gitee.com/noshore/images/raw/master/20200404163615.png" alt></p><h1 id="五、绑定域名并开启-HTTPS"><a href="#五、绑定域名并开启-HTTPS" class="headerlink" title="五、绑定域名并开启 HTTPS"></a>五、绑定域名并开启 HTTPS</h1><h2 id="1-绑定域名"><a href="#1-绑定域名" class="headerlink" title="1.绑定域名"></a>1.绑定域名</h2><p>在静态网站一栏右上角点击设置，下滑到底绑定我们的域名。<br>这里注意 绑定域名前先去把github的解析暂停，否则会出现SSL证书申请失败的问题。暂停之后暂时先不要开启<br><img src="https://gitee.com/noshore/images/raw/master/20200404164014.png" alt></p><h2 id="2-域名解析"><a href="#2-域名解析" class="headerlink" title="2.域名解析"></a>2.域名解析</h2><p>1.在域名 <font color="red"> DNS </font>设置中添加一条  <font color="red">CNAME  </font>记录指向 <font color="red"> 你的coding pages地址 </font>，解析路线选择默认。<br>2.在域名 <font color="red">DNS</font>设置中添加一条<font color="red"> A</font>记录，记录指向 <font color="red"> 你的coding pages地址 </font>的<font color="red"> ip </font>，解析路线选择默认。（<font color="red"> ip地址获取：WIN+R输入cmd进入终端，输入：ping  你的coding pages地址 即可 </font>。） 其中coding pages地址就是你的访问地址<br><img src="https://gitee.com/noshore/images/raw/master/20200404193331.png" alt><br><img src="https://gitee.com/noshore/images/raw/master/20200404193600.png" alt><br>将 GitHub 的解析路线改为 境外，这样境外访问就会走 GitHub，境内就会走 Coding，也有人说阿里云是智能解析，自动分配路线，如果解析路线都是默认，境外访问同样会智能选择走 GitHub，境内走 Coding。</p><h2 id="3-开启HTTPS"><a href="#3-开启HTTPS" class="headerlink" title="3.开启HTTPS"></a>3.开启HTTPS</h2><p>最后，我们在coding中开启强制HTTPS，需要注意的是开启了不要急着去开启github的解析，等它生效，等个十来分钟然后去开启解析，最后去github绑定域名界面点击开启强制HTTPS。<br><img src="https://gitee.com/noshore/images/raw/master/20200404195903.png" alt><br><img src="https://gitee.com/noshore/images/raw/master/20200404194109.png" alt></p><h1 id="六、总结"><a href="#六、总结" class="headerlink" title="六、总结"></a>六、总结</h1><p>实现双线部署以后可以看一下速度确实快了一些，但也没有快的特别多，有时候coding还是会抽风，有条件的可以给域名备案然后开个CDN给网站加速。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://gitee.com/noshore/images/raw/master/20200404200008.jpg&quot; alt&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="技术教程" scheme="https://noshore.cn/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="hexo" scheme="https://noshore.cn/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>安卓跳过开屏广告</title>
+    <link href="https://noshore.cn/2020/04/04/anzhuokaiping/"/>
+    <id>https://noshore.cn/2020/04/04/anzhuokaiping/</id>
+    <published>2020-04-04T07:12:26.000Z</published>
+    <updated>2020-04-04T07:31:54.627Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://gitee.com/noshore/images/raw/master/20200404153133.jpg" alt></p><a id="more"></a><p>&ensp; &ensp; 很多常见的国产app，都会放置开屏广告（例如：知乎、贴吧、微博等），这些开屏广告虽然预留了“跳过”按钮，但是由于按钮位置不符合用户点击习惯且面积很小，因而经常会造成误触。<br><img src="https://gitee.com/noshore/images/raw/master/20200404151522.png" alt><br>&ensp; &ensp; 本想点击跳过，结果反而点击了广告内容，有时候甚至直接开始下载广告所推广的东西，体验极差。<br><img src="https://gitee.com/noshore/images/raw/master/20200404151525.jpg" alt><br>&ensp; &ensp; 因而这次推荐的app【自动跳过】就能很好地解决这个问题，自动帮你模拟点击“跳过”按钮，无需等待，不用担心误触。</p><p>下载地址：<a href="https://www.lanzous.com/iazhwsh" target="_blank" rel="noopener">https://www.lanzous.com/iazhwsh</a> 密码:shore</p><p>【自动跳过】使用<strong>注意事项</strong></p><ul><li><p>授予权限<br>1.在安卓设置 -&gt; “无障碍”选项中，授权本软件。<br>2.在安卓设置 -&gt; 应用 -&gt; 自动跳过 -&gt; 权限中，允许自启动。<br>3.在省电策略中，设置本软件为“无限制”。</p></li><li><p>临时禁用<br>如果需要临时禁用自动跳过的功能，可以编辑安卓的通知滑块，添加“点击临时禁用”滑块，点击该滑块，即可临时禁用自动跳过功能，再次点击该滑块即可开启。</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://gitee.com/noshore/images/raw/master/20200404153133.jpg&quot; alt&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="安卓软件" scheme="https://noshore.cn/categories/%E5%AE%89%E5%8D%93%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+      <category term="软件" scheme="https://noshore.cn/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>淘宝京东抢购助手</title>
