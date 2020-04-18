@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://noshore.cn/"/>
-  <updated>2020-04-18T07:05:26.800Z</updated>
+  <updated>2020-04-18T08:18:07.268Z</updated>
   <id>https://noshore.cn/</id>
   
   <author>
@@ -17,20 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>无岸海查题小程序</title>
+    <link href="https://noshore.cn/2020/04/18/xcx/"/>
+    <id>https://noshore.cn/2020/04/18/xcx/</id>
+    <published>2020-04-18T07:39:35.000Z</published>
+    <updated>2020-04-18T08:18:07.268Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://gitee.com/noshore/images/raw/master/20200418154502.png" alt></p><a id="more"></a><center>来了来了~~ <font color="green">查题小程序</font>终于上线啦</center><center>小程序搜索：<font color="blue"> 无岸海查题 </font></center><center>前段时间在后台看到很多同学查不到题很生气</center><center> 取消关注了 </center><center>无岸海在这边说一下，公众号是<font color="red">网课查题</font>（超星学习通、智慧树知到等平台）</center><center>选修的赚学分的课，比如军事理论、大学生就业与创业指导等等</center><center>也就是说因为疫情原因本该在学校上的这些“网课”很多是查不到的</center><center>为此无岸海上线了小程序，小程序为<font color="red"> 综合查题</font></center><center>但也不是说所有题目都能查到</center><center>希望各位同学查不到也不要取消关注，因为题库在<font color="red">不断更新</font>！！！</center><center>每天都会新增题库，为的就是能够更好地为各位同学服务</center><center>另外考虑到很多同学可能平常会刷抖音</center><center>有时候想要保存好看的小姐姐的视频或者喜欢的素材</center><center>却苦于下载下来的视频有水印</center><center>所以无岸海在小程序内置了<font color="red">抖音去水印 </font>功能</center><center>只需要将抖音视频链接复制进小程序</center><center>解析之后将小程序提供的链接在浏览器打开就可以下载啦</center><center>这么好的公众号和小程序希望各位能够向同学朋友多多推广</center><center>公众号的软件资源也会不断更新</center><center>祝各位同学用的愉快，有问题可以及时联系我</center><center>最后的最后不要取消关注 关注我你一定会有收获的！</center><p><img src="https://gitee.com/noshore/images/raw/master/20200418160224.jpg" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://gitee.com/noshore/images/raw/master/20200418154502.png&quot; alt&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="查题" scheme="https://noshore.cn/categories/%E6%9F%A5%E9%A2%98/"/>
+    
+    
+      <category term="小程序" scheme="https://noshore.cn/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>GitHub 下载加速</title>
     <link href="https://noshore.cn/2020/04/18/github/"/>
     <id>https://noshore.cn/2020/04/18/github/</id>
     <published>2020-04-18T06:51:02.000Z</published>
-    <updated>2020-04-18T07:05:26.800Z</updated>
+    <updated>2020-04-18T07:42:41.814Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://gitee.com/noshore/images/raw/master/20200418150437.jpg" alt><br><strong>Github 国内加速下载</strong><br><strong>Github</strong> 我们都知道是世界上最大的开源及私有软件项目的托管平台，全世界每天有海量优秀的开源软件在这里产生，而 Github 在国内很多时候获取到的下载链接是亚马逊的服务器。</p><p>中国因为不可言说的原因，经常<strong>抽疯</strong>或<strong>龟速</strong>。想要加快 Github 下载速度就需要用到 Github 国内加速服务。</p><p><strong>Github 加速下载</strong></p><p>只需要复制当前 Github 地址粘贴到输入框中就可以加速下载！</p><p><a href="https://www.toolnb.com/tools/githubjiasu.html" target="_blank" rel="noopener">https://www.toolnb.com/tools/githubjiasu.html</a></p><p><strong>Github 代下载服务</strong></p><p>在输入框中粘贴项目地址。支持最大不超过 2GB 的仓库。</p><p><a href="https://g.widora.cn" target="_blank" rel="noopener">https://g.widora.cn</a></p><p>该网站为演示站点，如无法打开可以查看开源项目：<a href="https://github.com/xiaoxinda/github-proxy" target="_blank" rel="noopener">github-proxy</a></p><p><strong>Github 文件加速</strong></p><p>利用 <strong>Cloudflare Workers</strong> 对 github release 、archive 以及项目文件进行加速，部署无需服务器且自带 cdn</p><p><a href="https://gh.api.99988866.xyz" target="_blank" rel="noopener">https://gh.api.99988866.xyz</a></p><p>该网站为演示站点，如无法打开可以查看开源项目：<a href="https://hunsh.net/archives/23/" target="_blank" rel="noopener">gh-proxy-Github 文件加速</a>自行部署。</p><p><strong>Github 加速脚本</strong></p><p>油猴插件：<a href="https://greasyfork.org/zh-CN/scripts/398278-github-%E9%95%9C%E5%83%8F%E8%AE%BF%E9%97%AE-%E5%8A%A0%E9%80%9F%E4%B8%8B%E8%BD%BD" target="_blank" rel="noopener">加速下载脚本</a></p><p>在此之前需要安装油猴或暴力猴扩展，如已安装请忽视<br> <a href="https://545c.com/file/13811899-415772159" target="_blank" rel="noopener">crx 下载</a><br>如无法直接安装.crx 扩展，使用终极解决方法，把.crx 解压缩，然后在扩展中心中开启<strong>开发者模式</strong>然后选择<strong>加载已解压的扩展程序</strong>。</p><p><strong>Github 国内中转</strong></p><p>直接提供了多个海外服务器来反向代理 Github 下载地址实现加速下载。</p><p><a href="http://git.aakkc.com" target="_blank" rel="noopener">http://git.aakkc.com</a></p><p>Github + Jsdelivr 也是不错的加速 Github 的方法，jsdelivr 唯一美中不足的就是它不能获取 exe 文件以及 Release 处附加的 exe 和 dmg 文件。</p><p>也就是说如果 exe 文件是附加在<strong>Release</strong> 处但是没有在 code 里面的话是无法获取的。所以只能当作静态文件 cdn 用途，而不能作为 Release 加速下载的用途。</p>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://gitee.com/noshore/images/raw/master/20200418154218.jpg" alt></p><a id="more"></a><p><strong>Github 国内加速下载</strong><br><strong>Github</strong> 我们都知道是世界上最大的开源及私有软件项目的托管平台，全世界每天有海量优秀的开源软件在这里产生，而 Github 在国内很多时候获取到的下载链接是亚马逊的服务器。</p><p>中国因为不可言说的原因，经常<strong>抽疯</strong>或<strong>龟速</strong>。想要加快 Github 下载速度就需要用到 Github 国内加速服务。</p><p><strong>Github 加速下载</strong></p><p>只需要复制当前 Github 地址粘贴到输入框中就可以加速下载！</p><p><a href="https://www.toolnb.com/tools/githubjiasu.html" target="_blank" rel="noopener">https://www.toolnb.com/tools/githubjiasu.html</a></p><p><strong>Github 代下载服务</strong></p><p>在输入框中粘贴项目地址。支持最大不超过 2GB 的仓库。</p><p><a href="https://g.widora.cn" target="_blank" rel="noopener">https://g.widora.cn</a></p><p>该网站为演示站点，如无法打开可以查看开源项目：<a href="https://github.com/xiaoxinda/github-proxy" target="_blank" rel="noopener">github-proxy</a></p><p><strong>Github 文件加速</strong></p><p>利用 <strong>Cloudflare Workers</strong> 对 github release 、archive 以及项目文件进行加速，部署无需服务器且自带 cdn</p><p><a href="https://gh.api.99988866.xyz" target="_blank" rel="noopener">https://gh.api.99988866.xyz</a></p><p>该网站为演示站点，如无法打开可以查看开源项目：<a href="https://hunsh.net/archives/23/" target="_blank" rel="noopener">gh-proxy-Github 文件加速</a>自行部署。</p><p><strong>Github 加速脚本</strong></p><p>油猴插件：<a href="https://greasyfork.org/zh-CN/scripts/398278-github-%E9%95%9C%E5%83%8F%E8%AE%BF%E9%97%AE-%E5%8A%A0%E9%80%9F%E4%B8%8B%E8%BD%BD" target="_blank" rel="noopener">加速下载脚本</a></p><p>在此之前需要安装油猴或暴力猴扩展，如已安装请忽视<br> <a href="https://545c.com/file/13811899-415772159" target="_blank" rel="noopener">crx 下载</a><br>如无法直接安装.crx 扩展，使用终极解决方法，把.crx 解压缩，然后在扩展中心中开启<strong>开发者模式</strong>然后选择<strong>加载已解压的扩展程序</strong>。</p><p><strong>Github 国内中转</strong></p><p>直接提供了多个海外服务器来反向代理 Github 下载地址实现加速下载。</p><p><a href="http://git.aakkc.com" target="_blank" rel="noopener">http://git.aakkc.com</a></p><p>Github + Jsdelivr 也是不错的加速 Github 的方法，jsdelivr 唯一美中不足的就是它不能获取 exe 文件以及 Release 处附加的 exe 和 dmg 文件。</p><p>也就是说如果 exe 文件是附加在<strong>Release</strong> 处但是没有在 code 里面的话是无法获取的。所以只能当作静态文件 cdn 用途，而不能作为 Release 加速下载的用途。</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;&lt;img src=&quot;https://gitee.com/noshore/images/raw/master/20200418150437.jpg&quot; alt&gt;&lt;br&gt;&lt;strong&gt;Github 国内加速下载&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;Github&lt;/stron
-      
+      &lt;p&gt;&lt;img src=&quot;https://gitee.com/noshore/images/raw/master/20200418154218.jpg&quot; alt&gt;&lt;/p&gt;
     
     </summary>
     
