@@ -3,9 +3,7 @@
   <entry>
     <title>无岸海查题小程序</title>
     <url>/xcx.html</url>
-    <content><![CDATA[<p><img src="https://gitee.com/noshore/images/raw/master/20200418154502.png" alt></p>
-<a id="more"></a>
-<center>来了来了~~ <font color="green">查题小程序</font>全新版本震撼上线！</center>
+    <content><![CDATA[<center>来了来了~~ <font color="green">查题小程序</font>全新版本震撼上线！</center>
 
 <center><font color="blue"> QQ小程序</font>搜索：<font color="blue">无岸海查题 </font></center>
 
@@ -35,15 +33,14 @@
         <category>查题</category>
       </categories>
       <tags>
+        <tag>网课查题</tag>
         <tag>小程序</tag>
       </tags>
   </entry>
   <entry>
     <title>GitHub 下载加速</title>
     <url>/github.html</url>
-    <content><![CDATA[<p><img src="https://gitee.com/noshore/images/raw/master/20200418154218.jpg" alt></p>
-<a id="more"></a>
-<p><strong>Github 国内加速下载</strong><br><strong>Github</strong> 我们都知道是世界上最大的开源及私有软件项目的托管平台，全世界每天有海量优秀的开源软件在这里产生，而 Github 在国内很多时候获取到的下载链接是亚马逊的服务器。</p>
+    <content><![CDATA[<p><strong>Github 国内加速下载</strong><br><strong>Github</strong> 我们都知道是世界上最大的开源及私有软件项目的托管平台，全世界每天有海量优秀的开源软件在这里产生，而 Github 在国内很多时候获取到的下载链接是亚马逊的服务器。</p>
 <p>中国因为不可言说的原因，经常<strong>抽疯</strong>或<strong>龟速</strong>。想要加快 Github 下载速度就需要用到 Github 国内加速服务。</p>
 <p><strong>Github 加速下载</strong></p>
 <p>只需要复制当前 Github 地址粘贴到输入框中就可以加速下载！</p>
@@ -75,10 +72,7 @@
   <entry>
     <title>网课查题公众号</title>
     <url>/wah.html</url>
-    <content><![CDATA[<p><img src="https://gitee.com/noshore/images/raw/master/20200415142607.png" alt></p>
-<a id="more"></a>
-
-<p>关注公众号：<strong>无岸海</strong></p>
+    <content><![CDATA[<p>关注公众号：<strong>无岸海</strong></p>
 <p>支持截图搜索</p>
 <p>免费无限次网课查题</p>
 <p>另外送一些office365账号</p>
@@ -87,15 +81,14 @@
         <category>查题</category>
       </categories>
       <tags>
+        <tag>公众号</tag>
         <tag>网课查题</tag>
       </tags>
   </entry>
   <entry>
     <title>hexo双线部署coding+github pages，进行速度优化并实现HTTPS</title>
     <url>/shuangxianbushu.html</url>
-    <content><![CDATA[<p><img src="https://gitee.com/noshore/images/raw/master/20200404200008.jpg" alt></p>
-<a id="more"></a>
-<h1 id="一、域名申请"><a href="#一、域名申请" class="headerlink" title="一、域名申请"></a>一、域名申请</h1><p>首先，也是最主要的，你需要购买一个域名，常见的有阿里云、腾讯云、新网等</p>
+    <content><![CDATA[<h1 id="一、域名申请"><a href="#一、域名申请" class="headerlink" title="一、域名申请"></a>一、域名申请</h1><p>首先，也是最主要的，你需要购买一个域名，常见的有阿里云、腾讯云、新网等</p>
 <h1 id="二、coding注册及配置"><a href="#二、coding注册及配置" class="headerlink" title="二、coding注册及配置"></a>二、coding注册及配置</h1><h2 id="1-注册账户"><a href="#1-注册账户" class="headerlink" title="1.注册账户"></a>1.注册账户</h2><p>进入<a href="https://coding.net/" target="_blank" rel="noopener">coding官网</a>，点击免费注册（创建团队，5人以下免费） 注意这个地方用户名一定要好好设置，因为后面为了方便需要用到。</p>
 <h2 id="2-创建项目"><a href="#2-创建项目" class="headerlink" title="2.创建项目"></a>2.创建项目</h2><p>选择代码托管项目，项目名称建议和你的用户名一致，到时候可以直接通过  <font color="red">user_name.coding.me</font>访问你的博客，如果项目名与用户名不一致，则需要通过  <font color="red"> user_name.coding.me/project_name </font>才能访问，项目描述随便写，勾选启用 README.md 文件初始化项目。<br><img src="https://gitee.com/noshore/images/raw/master/20200404160752.png" alt></p>
 <h2 id="3-添加ssh-key"><a href="#3-添加ssh-key" class="headerlink" title="3.添加ssh key"></a>3.添加ssh key</h2><p>这一步和github是一样的<br>在git bash中<br><code>git config --global user.name &quot;yourname&quot;</code><br><code>git config --global user.email &quot;youremail&quot;</code><br>可以用以下两条，检查一下你有没有输对<br><code>git config user.name</code><br><code>git config user.email</code><br>然后创建SSH,一路回车<br><code>ssh-keygen -t rsa -C &quot;youremail&quot;</code><br>ssh，简单来讲，就是一个秘钥，其中，id_rsa是你这台电脑的私人秘钥，不能给别人看的，id_rsa.pub是公共秘钥，可以随便给别人看。把这个公钥放在GitHub上，这样当你链接GitHub自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过git上传你的文件到GitHub上。<br>之前配置过github直接用就行，个人设置-ssh公钥，然后新增公钥，名称随便填，点击<strong>永久有效</strong>。<br><img src="https://gitee.com/noshore/images/raw/master/20200404162431.png" alt><br>添加后，检查一下是不是添加成功<br><code>ssh -T git@git.coding.net</code></p>
@@ -110,15 +103,15 @@
         <category>技术教程</category>
       </categories>
       <tags>
+        <tag>Github</tag>
         <tag>hexo</tag>
+        <tag>Coding</tag>
       </tags>
   </entry>
   <entry>
     <title>文献助手</title>
     <url>/wenxianzhushou.html</url>
-    <content><![CDATA[<p><img src="https://gitee.com/noshore/images/raw/master/20200403143517.jpg" alt></p>
-<a id="more"></a>
-<p>&ensp; <strong>文献神器简介</strong></p>
+    <content><![CDATA[<p>&ensp; <strong>文献神器简介</strong></p>
 <ul>
 <li>文献神器是SCI-HUB Windows桌面版，输入doi号即可快速下载（国外）文献。</li>
 <li>本软件还推荐了谷歌学术，sci-hub入口，方便查询下载文献</li>
@@ -137,9 +130,7 @@
   <entry>
     <title>使用RaiDrive将网盘映射为本地磁盘</title>
     <url>/raidrive.html</url>
-    <content><![CDATA[<p><img src="https://gitee.com/noshore/images/raw/master/20200402214724.jpg" alt></p>
-<a id="more"></a>
-<p>&ensp; &ensp; 你是不是也想拥有别人那样的<strong>TB</strong>甚至<strong>EB</strong>的本地磁盘呢？这边为你提供一个实现这个想法的教程——通过<strong>Raidrive</strong>将网盘映射为本地磁盘。<br><img src="https://gitee.com/noshore/images/raw/master/20200402202917.png" alt><br>&ensp; &ensp; <strong>RaiDrive</strong>是一款开源的网盘映射工具，支持Google Drive、Google Photos、Dropbox、OneDrive、FTP、SFTP、WebDAV，该工具目前只有Windows版本。<br><img src="https://gitee.com/noshore/images/raw/master/20200402202537.png" alt><br><img src="https://gitee.com/noshore/images/raw/master/20200402202905.png" alt></p>
+    <content><![CDATA[<p>&ensp; &ensp; 你是不是也想拥有别人那样的<strong>TB</strong>甚至<strong>EB</strong>的本地磁盘呢？这边为你提供一个实现这个想法的教程——通过<strong>Raidrive</strong>将网盘映射为本地磁盘。<br><img src="https://gitee.com/noshore/images/raw/master/20200402202917.png" alt><br>&ensp; &ensp; <strong>RaiDrive</strong>是一款开源的网盘映射工具，支持Google Drive、Google Photos、Dropbox、OneDrive、FTP、SFTP、WebDAV，该工具目前只有Windows版本。<br><img src="https://gitee.com/noshore/images/raw/master/20200402202537.png" alt><br><img src="https://gitee.com/noshore/images/raw/master/20200402202905.png" alt></p>
 <h1 id="一、注册网盘帐号"><a href="#一、注册网盘帐号" class="headerlink" title="一、注册网盘帐号"></a>一、注册网盘帐号</h1><p>&ensp; &ensp; 现在用的比较多的就是Google Drive和OneDrive，但是国内如果你不会科学上网的话，Google Drive是用不了的。推荐使用Onedrive速度虽然不快但还是可以的。帐号的话大学应该都有提供学校的教育邮箱，去微软官网申请账号可以获得1T的容量。<br>&ensp; &ensp; 如果不是学生，博主这边会提供一些5T帐号，新的空白账号，支持修改密码。关注公众号：<strong>无岸海</strong>，回复<strong>5T帐号</strong> 即可领取。<br>&ensp; &ensp; 另外博主也提供<strong>创建Google Drive团队盘</strong>的服务，同样关注公众号：<strong>无岸海</strong>，回复<strong>团队盘</strong>。</p>
 <h1 id="二、下载与安装"><a href="#二、下载与安装" class="headerlink" title="二、下载与安装"></a>二、下载与安装</h1><p>&ensp; &ensp; 可以前往<a href="https://www.raidrive.com/download/" target="_blank" rel="noopener">RaiDrive官网</a>下载最新版本安装。如果觉得下载慢可以直接使用博主提供的<a href="https://www.lanzous.com/iaxj7gf" target="_blank" rel="noopener">蓝奏云链接</a>下载，目前是最新版本，以后出了新版本也一样可以先下载这个版本，之后在软件中点击升级。</p>
 <h1 id="三、连接网盘与映射"><a href="#三、连接网盘与映射" class="headerlink" title="三、连接网盘与映射"></a>三、连接网盘与映射</h1><p>&ensp; &ensp; 由于Google服务在国内无法访问，需要代理，并不是所有人都适合，所以这篇文章以OneDrive为例。</p>
@@ -160,9 +151,7 @@
   <entry>
     <title>利用码云gitee+Picgo搭建个人图床</title>
     <url>/picgo.html</url>
-    <content><![CDATA[<p><img src="https://gitee.com/noshore/images/raw/master/20200402194146.jpg" alt></p>
-<a id="more"></a>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h1><p>&ensp; &ensp; 日常写博客总会需要用到一些图片，本地图片一个个导入很麻烦而且会影响到博客的加载速度。网上也有很多免费的图床，不过总感觉不安全，万一哪天他们不做了之前的图片就都失效了。所以思来想去还是自己搭建一个图床。自己搭建图床的话可以用腾讯云、阿里云OSS，可惜需要付费，对于我这种需求量不大又刚起步的博客来说更偏向于白嫖。<br>&ensp; &ensp; 所以，最终选择使用 gitee 和 PicGo 搭建个人图床，相对现状这个是更加简便又实在的，存储、速度也都可以满足要求。或者，用 Github 代替 gitee 也是一样的，但是毕竟由于一些原因，访问有时太慢了，甚至直接卡掉，严重影响体验。不过也可以使用jsDelivr的CDN加速，这个之后有空在另一篇博客讲解。</p>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h1><p>&ensp; &ensp; 日常写博客总会需要用到一些图片，本地图片一个个导入很麻烦而且会影响到博客的加载速度。网上也有很多免费的图床，不过总感觉不安全，万一哪天他们不做了之前的图片就都失效了。所以思来想去还是自己搭建一个图床。自己搭建图床的话可以用腾讯云、阿里云OSS，可惜需要付费，对于我这种需求量不大又刚起步的博客来说更偏向于白嫖。<br>&ensp; &ensp; 所以，最终选择使用 gitee 和 PicGo 搭建个人图床，相对现状这个是更加简便又实在的，存储、速度也都可以满足要求。或者，用 Github 代替 gitee 也是一样的，但是毕竟由于一些原因，访问有时太慢了，甚至直接卡掉，严重影响体验。不过也可以使用jsDelivr的CDN加速，这个之后有空在另一篇博客讲解。</p>
 <h1 id="一、环境准备"><a href="#一、环境准备" class="headerlink" title="一、环境准备"></a>一、环境准备</h1><h2 id="1-安装Node-js"><a href="#1-安装Node-js" class="headerlink" title="1.安装Node.js"></a>1.安装Node.js</h2><p>这里需要注意一下，安装<a href="http://nodejs.cn/download/" target="_blank" rel="noopener">Node.js</a>是为了后面配置Picgo插件。</p>
 <h2 id="2-安装Picgo"><a href="#2-安装Picgo" class="headerlink" title="2.安装Picgo"></a>2.安装Picgo</h2><p>进入<a href="https://picgo.github.io/PicGo-Doc/zh/guide/" target="_blank" rel="noopener">Picgo官网</a>下载，由于github的问题下载速度较慢，在这里放上博主已经下载好上传到百度网盘的。<br>链接:<a href="https://pan.baidu.com/s/115MA7FdskRM2Rapd4RsBmg" target="_blank" rel="noopener">https://pan.baidu.com/s/115MA7FdskRM2Rapd4RsBmg</a> 提取码:a336</p>
 <h1 id="二、码云配置"><a href="#二、码云配置" class="headerlink" title="二、码云配置"></a>二、码云配置</h1><h2 id="1-注册帐号"><a href="#1-注册帐号" class="headerlink" title="1.注册帐号"></a>1.注册帐号</h2><p>首先我们需要拥有一个gitee的帐号。<a href="https://gitee.com/" target="_blank" rel="noopener">码云gitee</a><br><img src="https://gitee.com/noshore/images/raw/master/20200402174853.png" alt></p>
