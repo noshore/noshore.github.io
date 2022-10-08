@@ -1,0 +1,186 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>宝塔面板搭建OneDrive目录程序OLAINDEX | 无岸海</title><meta name="description" content="OneDrive目录索引程序——OLAINDEX"><meta name="keywords" content="OneDrive,OLAINDEX"><meta name="author" content="无岸海"><meta name="copyright" content="无岸海"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="dns-prefetch" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://www.google-analytics.com" crossorigin="crossorigin"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><link rel="preconnect" href="http://ta.qq.com"/><link rel="dns-prefetch" href="http://ta.qq.com"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="dns-prefetch" href="https://fonts.googleapis.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="dns-prefetch" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="宝塔面板搭建OneDrive目录程序OLAINDEX"><meta name="twitter:description" content="OneDrive目录索引程序——OLAINDEX"><meta name="twitter:image" content="https://kyun.ltyuanfang.cn/tc/2020/05/24/f39493a7f308d.png"><meta property="og:type" content="article"><meta property="og:title" content="宝塔面板搭建OneDrive目录程序OLAINDEX"><meta property="og:url" content="https://noshore.cn/ola"><meta property="og:site_name" content="无岸海"><meta property="og:description" content="OneDrive目录索引程序——OLAINDEX"><meta property="og:image" content="https://kyun.ltyuanfang.cn/tc/2020/05/24/f39493a7f308d.png"><meta property="article:published_time" content="2020-05-24T08:52:03.000Z"><meta property="article:modified_time" content="2020-05-31T11:57:33.346Z"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>var autoChangeMode = '1'
+var t = Cookies.get("theme")
+if (autoChangeMode == '1'){
+  var isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+  var isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+  var isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined){
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport){
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour < 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+  }
+  } else if (t == 'light') activateLightMode()
+  else activateDarkMode()
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><link rel="canonical" href="https://noshore.cn/ola"><link rel="prev" title="Microsoft 365 E5开发者订阅保命计划" href="https://noshore.cn/e5.html"><link rel="next" title="无岸海查题小程序" href="https://noshore.cn/xcx.html"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-167341433-1', 'auto');
+ga('send', 'pageview');
+</script><script src="https://tajs.qq.com/stats?sId=66559693" charset="UTF-8"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://noshore.cn/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: {"languages":{"author":"作者: 无岸海","link":"链接: ","source":"来源: 无岸海","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: {"bookmark":{"message_prev":"按","message_next":"键将本页加入书签"},"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#2d3035","position":"bottom-left"},
+  baiduPush: true,
+  highlightCopy: true,
+  highlightLang: true,
+  highlightShrink: 'false',
+  isFontAwesomeV5: false,
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: true
+  
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isSidebar: true  
+  }</script><noscript><style>
+#page-header {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="无岸海" type="application/atom+xml">
+</head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">19</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">29</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">13</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 清单</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div></div></div><i class="fa fa-arrow-right on" id="toggle-sidebar" aria-hidden="true">     </i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#简介"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#功能"><span class="toc-number">2.</span> <span class="toc-text">功能</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#项目地址"><span class="toc-number">3.</span> <span class="toc-text">项目地址</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#演示地址"><span class="toc-number">4.</span> <span class="toc-text">演示地址</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#环境要求"><span class="toc-number">5.</span> <span class="toc-text">环境要求</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装"><span class="toc-number">6.</span> <span class="toc-text">安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、安装宝塔面板"><span class="toc-number">6.1.</span> <span class="toc-text">1、安装宝塔面板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、安装PHP环境"><span class="toc-number">6.2.</span> <span class="toc-text">2、安装PHP环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、安装PHP扩展"><span class="toc-number">6.3.</span> <span class="toc-text">3、安装PHP扩展</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4、修改PHP禁用函数"><span class="toc-number">6.4.</span> <span class="toc-text">4、修改PHP禁用函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5、安装Composer"><span class="toc-number">6.5.</span> <span class="toc-text">5、安装Composer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6、安装OLAINDEX"><span class="toc-number">6.6.</span> <span class="toc-text">6、安装OLAINDEX</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7、配置站点"><span class="toc-number">6.7.</span> <span class="toc-text">7、配置站点</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#配置程序"><span class="toc-number">7.</span> <span class="toc-text">配置程序</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#特殊文件功能"><span class="toc-number">8.</span> <span class="toc-text">特殊文件功能</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#其他设置"><span class="toc-number">9.</span> <span class="toc-text">其他设置</span></a></li></ol></div></div></div><div id="body-wrap"><div class="post-bg" id="nav" style="background-image: url(https://kyun.ltyuanfang.cn/tc/2020/05/24/f39493a7f308d.png)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">无岸海</a></span><span class="pull_right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 清单</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="post-info"><div id="post-title"><div class="posttitle">宝塔面板搭建OneDrive目录程序OLAINDEX</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="发表于 2020-05-24 16:52:03"><i class="fa fa-calendar" aria-hidden="true"></i> 发表于 2020-05-24</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="更新于 2020-05-31 19:57:33"><i class="fa fa-history" aria-hidden="true"></i> 更新于 2020-05-31</span></time><span class="post-meta__categories"><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/">技术教程</a><i class="fa fa-angle-right post-meta__separator" aria-hidden="true"></i><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/%E7%9B%AE%E5%BD%95%E7%A8%8B%E5%BA%8F/">目录程序</a></span></div><div class="meta-secondline"> <span class="post-meta-wordcount"><i class="post-meta__icon fa fa-file-word-o" aria-hidden="true"></i><span>字数总计:</span><span class="word-count">1.3k</span><span class="post-meta__separator">|</span><i class="post-meta__icon fa fa-clock-o" aria-hidden="true"></i><span>阅读时长: 4 分钟</span></span></div><div class="meta-thirdline"><span class="post-meta-pv-cv"><span class="post-meta__separator">|</span><i class="fa fa-eye post-meta__icon" aria-hidden="true"> </i><span>阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"><span class="post-meta__separator">|</span><i class="post-meta__icon fa fa-comment-o" aria-hidden="true"></i><span>评论数:</span><a href="/olaindex.html#post-comment" itemprop="discussionUrl"><span class="valine-comment-count comment-count" data-xid="/olaindex.html" itemprop="commentCount"></span></a></span></div></div></div></div><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><div class="note info">
+            <p><strong>说明：</strong> 相信很多人应该都有office365的帐号，拿着5T的<code>OneDrive</code>却无处可用，<del>有些帐号是1T，不过没差啦</del>。博主自己也有一些帐号，所以想着用来做些公开分享，就在网上搜了一下，找到了一些目录程序，例如<code>oneindex</code>、<code>olaindex</code>、<code>onelist</code>、<code>onemanager</code>等等，这方面的东西还是比较多的，最后我选择了olaindex，主要是看自己喜欢吧，其实搭建过程都差不多,会了一个就基本都会了，下面我们就来讲讲宝塔面板搭建OLAINDEX（纯奶妈教程）</p>
+          </div>
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><ul>
+<li><code>OneDrive</code>目录索引；</li>
+<li>基于最新<code>PHP</code>框架<code>laravel5</code>搭建而成；</li>
+<li>基于<code>bootswatch</code>响应式页面布局，适配<code>PC</code>、平板、手机；</li>
+</ul>
+<h1 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h1><ul>
+<li><code>OneDrive</code> 目录查看索引分页查看；</li>
+<li>支持代码、图片、文本文件即时预览、图片列表栏展示；</li>
+<li>支持音视频播放（兼容大部分格式），视频播放采用 <code>Dplayer.js</code>，音乐播放采用 <code>Aplayer</code>；</li>
+<li>支持自定义创建文件夹、文件夹加密、文件/文件夹删除、文件/文件夹的复制与移动；</li>
+<li>支持文件搜索、文件上传、文件直链分享与删除、文件直链一键下载；</li>
+<li>支持管理 <code>readme</code>/<code>head</code> 说明文件；</li>
+<li>支持<code>图床</code>；</li>
+<li>支持命令行操作；</li>
+<li>支持<code>文件离线下载</code>（个人版）；</li>
+<li>后台基本显示管理，多主题管理，文件预览管理等等（清理缓存后及时生效）；</li>
+<li>支持<code>世纪互联</code>；</li>
+<li>支持多种缓存系统（Redis、Memcached等）；</li>
+</ul>
+<h1 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h1><ul>
+<li><a href="https://github.com/WangNingkai/OLAINDEX" target="_blank" rel="noopener">https://github.com/WangNingkai/OLAINDEX</a></li>
+</ul>
+<h1 id="演示地址"><a href="#演示地址" class="headerlink" title="演示地址"></a>演示地址</h1><ul>
+<li><a href="https://pan.noshore.cn" target="_blank" rel="noopener">https://pan.noshore.cn</a><br>这是博主自己搭的</li>
+</ul>
+<h1 id="环境要求"><a href="#环境要求" class="headerlink" title="环境要求"></a>环境要求</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">PHP &gt;&#x3D; 7.1.3</span><br><span class="line">OpenSSL PHP</span><br><span class="line">PHP PDO 扩展</span><br><span class="line">PHP Mbstring 扩展</span><br><span class="line">PHP Tokenizer 扩展</span><br><span class="line">PHP XML 扩展</span><br><span class="line">PHP Ctype 扩展</span><br><span class="line">PHP JSON 扩展</span><br><span class="line">PHP Fileinfo 扩展(非必需，但最好安装)</span><br></pre></td></tr></table></figure>
+
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="1、安装宝塔面板"><a href="#1、安装宝塔面板" class="headerlink" title="1、安装宝塔面板"></a>1、安装宝塔面板</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#Centos系统</span><br><span class="line">yum install -y wget &amp;&amp; wget -O install.sh http:&#x2F;&#x2F;download.bt.cn&#x2F;install&#x2F;install.sh &amp;&amp; sh install.sh</span><br><span class="line"></span><br><span class="line">#Ubuntu系统</span><br><span class="line">wget -O install.sh http:&#x2F;&#x2F;download.bt.cn&#x2F;install&#x2F;install-ubuntu.sh &amp;&amp; sudo bash install.sh</span><br><span class="line"></span><br><span class="line">#Debian系统</span><br><span class="line">wget -O install.sh http:&#x2F;&#x2F;download.bt.cn&#x2F;install&#x2F;install-ubuntu.sh &amp;&amp; bash install.sh</span><br></pre></td></tr></table></figure>
+
+<h2 id="2、安装PHP环境"><a href="#2、安装PHP环境" class="headerlink" title="2、安装PHP环境"></a>2、安装PHP环境</h2><p>选择php7.3 <del>默认是php5.6好像</del><br><img src="https://kyun.ltyuanfang.cn/tc/2020/05/24/3ab8532be6107.png" alt></p>
+<h2 id="3、安装PHP扩展"><a href="#3、安装PHP扩展" class="headerlink" title="3、安装PHP扩展"></a>3、安装PHP扩展</h2><p>点击设置进去配置选项<br><img src="https://kyun.ltyuanfang.cn/tc/2020/05/24/344d6573fc715.png" alt></p>
+<p>这里安装<code>fileinfo</code>扩展 并附带安装<code>opcache</code>扩展以加速php运行<br><img src="https://kyun.ltyuanfang.cn/tc/2020/05/24/effae127a0957.png" alt></p>
+<h2 id="4、修改PHP禁用函数"><a href="#4、修改PHP禁用函数" class="headerlink" title="4、修改PHP禁用函数"></a>4、修改PHP禁用函数</h2><p>删除<code>exec</code>、<code>shell_exec</code> 、<code>proc_open</code>、<code>proc_get_status</code>和<code>putenv</code>函数，最后重启<code>PHP</code><br><img src="https://kyun.ltyuanfang.cn/tc/2020/05/24/be9a21c07920d.png" alt></p>
+<h2 id="5、安装Composer"><a href="#5、安装Composer" class="headerlink" title="5、安装Composer"></a>5、安装Composer</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -sS https:&#x2F;&#x2F;getcomposer.org&#x2F;installer | php</span><br><span class="line">mv composer.phar &#x2F;usr&#x2F;local&#x2F;bin&#x2F;composer</span><br></pre></td></tr></table></figure>
+
+<h2 id="6、安装OLAINDEX"><a href="#6、安装OLAINDEX" class="headerlink" title="6、安装OLAINDEX"></a>6、安装OLAINDEX</h2><p>单击左侧网站，添加站点，此时网站根目录就是<code>/www/wwwroot/xx.com</code><br>运行命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#将域名修改成自己的再运行</span><br><span class="line">cd &#x2F;www&#x2F;wwwroot&#x2F;xx.com</span><br><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;WangNingkai&#x2F;OLAINDEX.git tmp </span><br><span class="line">mv tmp&#x2F;.git . </span><br><span class="line">rm -rf tmp </span><br><span class="line">git reset --hard </span><br><span class="line">cp database&#x2F;database.sample.sqlite database&#x2F;database.sqlite  # 数据库文件</span><br><span class="line">composer install -vvv # 这里确保已成功安装 composer ，如果报权限问题，建议给予用户完整权限。</span><br><span class="line">chmod -R 777 storage </span><br><span class="line">chown -R www:www * # 此处 www 根据服务器具体用户组而定</span><br><span class="line">php artisan od:install # 此处绑定域名需根据实际域名谨慎填写（包含http&#x2F;https）</span><br></pre></td></tr></table></figure>
+<p><img src="https://kyun.ltyuanfang.cn/tc/2020/05/24/c960a06e1831d.png" alt></p>
+<h2 id="7、配置站点"><a href="#7、配置站点" class="headerlink" title="7、配置站点"></a>7、配置站点</h2><p>点击域名设置-网站目录，运行目录选择<code>public</code>，并把防跨站的勾去掉并重启<code>PHP</code>。然后点击伪静态，输入以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">location &#x2F; &#123;</span><br><span class="line">    try_files $uri $uri&#x2F; &#x2F;index.php?$query_string;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://kyun.ltyuanfang.cn/tc/2020/05/24/edbb8ed9d498b.png" alt></p>
+<p>注释选定内容，防止图片出现404。<br><img src="https://kyun.ltyuanfang.cn/tc/2020/05/24/a9c6437caca53.png" alt></p>
+<p>配置SSL，直接申请或者用已有的都行，开启强制HTTPS。<br><img src="https://kyun.ltyuanfang.cn/tc/2020/05/24/7b5726137164d.png" alt></p>
+<h1 id="配置程序"><a href="#配置程序" class="headerlink" title="配置程序"></a>配置程序</h1><p>访问域名配置程序，如出现500错误，一般是因为权限不足，将上面的代码再执行一遍。<br><img src="https://kyun.ltyuanfang.cn/tc/2020/05/24/cce219aa988d5.png" alt></p>
+<p>注意回调地址<code>redirect_uri</code>需要是<code>https</code>地址，所以之前需要开启SSL。确认好回调地址，点击申请，登陆帐号。</p>
+<p>复制你的应用机密<br><img src="https://kyun.ltyuanfang.cn/tc/2020/05/24/a5b86af7f0b0b.png" alt></p>
+<p>点击返回快速启动以后，复制你的应用id<br><img src="https://kyun.ltyuanfang.cn/tc/2020/05/24/ce442031f30e4.png" alt></p>
+<p>之后回到之前的界面填写完成，点击保存。至此就全部完成了，可以尽情享用了。</p>
+<p>后台地址：<code>https://xx.com/admin</code>，密码：<code>12345678</code></p>
+<div class="note warning">
+            <p>这里需要注意的是，如果你的账号是世纪互联，是无法直接申请的，需要你去<a href="https://www.azure.cn/" target="_blank" rel="noopener">Azure官网</a>注册一个应用，回调地址什么的是和国际版的方法一样的，之后添加一个客户端密码，然后回到之前的界面填入应用id和应用机密就好了。</p>
+          </div>
+
+<p><img src="https://kyun.ltyuanfang.cn/tc/2020/05/24/d72dd3c3f0143.png" alt><br><img src="https://kyun.ltyuanfang.cn/tc/2020/05/24/35bd43d647f8d.png" alt><br><img src="https://kyun.ltyuanfang.cn/tc/2020/05/24/bcadfad472748.png" alt></p>
+<h1 id="特殊文件功能"><a href="#特殊文件功能" class="headerlink" title="特殊文件功能"></a>特殊文件功能</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#不建议创建和以下同名的文件夹和文件，否则会导致文件无法查看下载</span><br><span class="line">README.md、HEAD.md 、.password 、.deny特殊文件使用</span><br><span class="line"></span><br><span class="line">#在文件夹底部添加说明</span><br><span class="line">在onedrive的文件夹中添加README.md文件，使用markdown语法。</span><br><span class="line"></span><br><span class="line">#在文件夹头部添加说明</span><br><span class="line">在onedrive的文件夹中添加HEAD.md 文件，使用markdown语法。</span><br><span class="line"></span><br><span class="line">#加密文件夹</span><br><span class="line">在onedrive的文件夹中添加.password文件，填入密码，密码不能为空。</span><br><span class="line"></span><br><span class="line">#禁止访问文件夹</span><br><span class="line">在onedrive的文件夹中添加.deny文件，该文件夹被禁止访问。</span><br></pre></td></tr></table></figure>
+
+<h1 id="其他设置"><a href="#其他设置" class="headerlink" title="其他设置"></a>其他设置</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#重置全部数据，删除数据库数据</span><br><span class="line">php artisan od:reset</span><br><span class="line">    </span><br><span class="line">#升级程序</span><br><span class="line">git pull</span><br><span class="line">composer install -vvv</span><br><span class="line">php artisan od:update</span><br></pre></td></tr></table></figure></div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">无岸海</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://noshore.cn/olaindex.html">https://noshore.cn/olaindex.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://noshore.cn" target="_blank">无岸海</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/OneDrive/">OneDrive</a><a class="post-meta__tags" href="/tags/OLAINDEX/">OLAINDEX</a></div><div class="post_share"><div class="social-share" data-image="https://kyun.ltyuanfang.cn/tc/2020/06/29/139dd4d6e6e68.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-button button--primary button--animated"> <i class="fa fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="post-qr-code__img" src="/img/wechat.jpg" alt="微信"/><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="post-qr-code__img" src="/img/alipay.jpg" alt="支付寶"/><div class="post-qr-code__desc">支付寶</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="prev-post pull_left"><a href="/e5.html"><img class="prev_cover" src="https://kyun.ltyuanfang.cn/tc/2020/05/25/e3f9459d3ddcc.png" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Microsoft 365 E5开发者订阅保命计划</div></div></a></div><div class="next-post pull_right"><a href="/xcx.html"><img class="next_cover" src="https://kyun.ltyuanfang.cn/tc/2020/05/24/ce01475e794aa.png" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">无岸海查题小程序</div></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fa fa-fw fa-thumbs-up" aria-hidden="true"></i><span> 相关推荐</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/Heroku.html" title="在Heroku环境下配置安装OLAINDEX"><img class="relatedPosts_cover" src="https://kyun.ltyuanfang.cn/tc/2020/05/31/1b19ba3dfb498.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-05-30</div><div class="relatedPosts_title">在Heroku环境下配置安装OLAINDEX</div></div></a></div><div class="relatedPosts_item"><a href="/Fast-io.html" title="Fast.io免费静态空间/目录程序，支持OneDrive/Google Drive/Github等"><img class="relatedPosts_cover" src="https://kyun.ltyuanfang.cn/tc/2020/05/29/c39d4911e16d6.png"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-05-29</div><div class="relatedPosts_title">Fast.io免费静态空间/目录程序，支持OneDrive/Google Drive/Github等</div></div></a></div><div class="relatedPosts_item"><a href="/OneDrive-storage.html" title="微软OneDrive网盘免费扩容到25T存储空间"><img class="relatedPosts_cover" src="https://kyun.ltyuanfang.cn/tc/2020/06/18/4623cc4639ee1.png"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-06-17</div><div class="relatedPosts_title">微软OneDrive网盘免费扩容到25T存储空间</div></div></a></div><div class="relatedPosts_item"><a href="/raidrive.html" title="使用RaiDrive将网盘映射为本地磁盘"><img class="relatedPosts_cover" src="https://kyun.ltyuanfang.cn/tc/2020/05/24/71e213ba8280c.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-04-02</div><div class="relatedPosts_title">使用RaiDrive将网盘映射为本地磁盘</div></div></a></div></div><div class="clear_both"></div></div><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> 评论</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var requestSetting = function (from,set) {
+  var from = from
+  var setting = set.split(',').filter(function(item){
+  return from.indexOf(item) > -1
+  });
+  setting = setting.length == 0 ? from :setting;
+  return setting
+}
+
+var guestInfo = requestSetting(['nick','mail','link'],'nick,mail,link')
+var requiredFields = requestSetting(['nick','mail','link'],'nick,mail')
+
+window.valine = new Valine({
+  el:'#vcomment',
+  appId: 'R3WOq2oUjFqsYPgq2oovqpKM-gzGzoHsz',
+  appKey: '0tc6GQCnAybDpsipNGqfrjOF',
+  notify: false,
+  verify: false,
+  placeholder: '留下你的足迹吧',
+  avatar: 'robohash',
+  meta: guestInfo,
+  pageSize: '10',
+  lang: 'zh-CN',
+  recordIP: false,
+  serverURLs: '',
+  emojiCDN: '',
+  emojiMaps: "",
+  enableQQ: true,
+  requiredFields: requiredFields
+});</script></div></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By 无岸海</div><div class="footer_custom_text">Powered by <a href="https://cloud.tencent.com/product/tcb?from=12334" target="_blank" rel="external nofollow noopener">云开发</a></div><div class="icp"><a href="http://www.beian.miit.gov.cn/" target="_blank" rel="noopener"><img class="icp-icon" src="/img/icp.png"/><span>苏ICP备20017694号-1</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="阅读模式"></i><i class="fa fa-plus" id="font_plus" title="放大字体"></i><i class="fa fa-minus" id="font_minus" title="缩小字体"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换" target="_self">繁</a><i class="darkmode fa fa-moon-o" id="darkmode" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><a id="to_comment" href="#post-comment" title="直达评论"><i class="scroll_to_comment fa fa-comments">  </i></a><i class="fa fa-list-ul close" id="mobile-toc-button" title="目录" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script defer id="ribbon" src="/js/third-party/canvas-ribbon.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="false"></script><script id="ribbon_piao" mobile="true" src="/js/third-party/piao.js"></script><script src="/js/third-party/activate-power-mode.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@3/instantpage.min.js" type="module"></script><script src="/js/third-party/click_heart.js"></script><script src="/js/search/local-search.js"></script></body></html>
